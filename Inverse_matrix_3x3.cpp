@@ -14,7 +14,7 @@ int main() {
 	
 	setlocale(LC_ALL, "spanish");
 	
-	double matriz_principal[3][3];		//Creaci髇 de arreglos bidimensionales (matrices).
+	double matriz_principal[3][3];		//Creaci贸n de arreglos bidimensionales (matrices).
 	double matriz_cofactores[2][2];
 	double matriz_adjunta[3][3];
 	double matriz_transpuesta[3][3];
@@ -53,7 +53,7 @@ int main() {
 	
 	determinante_3x3=dato_1-dato_2;
 	
-	//C罫CULO DE LA MATRIZ ADJUNTA:
+	//C脕LCULO DE LA MATRIZ ADJUNTA:
 	
 	for(int i=0; i<=2; i++) {		//Primer recorrido de la matriz principal.
 		for(int j=0; j<=2; j++) {
@@ -63,7 +63,7 @@ int main() {
 			for(int k=0; k<=2; k++) {		//Segundo recorrido de la matriz principal. 
 				for(int l=0; l<=2; l++) {
 						
-					if(k!=i && l!=j) {		//Comparaci髇 de posiciones entre recorridos. 
+					if(k!=i && l!=j) {		//Comparaci贸n de posiciones entre recorridos. 
 						matriz_cofactores[m][n]=matriz_principal[k][l];		//Registro de valores en la matriz de cofactores.
 						if(n<1) {
 							n++;
@@ -77,7 +77,7 @@ int main() {
 				}
 			}
 			
-			if(((i+j) % 2) == 0) {		//Asignaci髇 de signo al elemento final de la matriz adjunta.
+			if(((i+j) % 2) == 0) {		//Asignaci贸n de signo al elemento final de la matriz adjunta.
 				matriz_adjunta[i][j]=determinante(matriz_cofactores);
 			}
 			else {
@@ -91,11 +91,11 @@ int main() {
 	
 	for(int i=0; i<=2; i++) {
 		for(int j=0; j<=2; j++) {
-			matriz_transpuesta[i][j]=(1/determinante_3x3)*matriz_adjunta[j][i];		//Multiplicaci髇 de 1/Determinante a la matriz transpuesta.
+			matriz_transpuesta[i][j]=(1/determinante_3x3)*matriz_adjunta[j][i];		//Multiplicaci贸n de 1/Determinante a la matriz transpuesta.
 		}
 	}
 	
-	//IMPRESI覰 DE LA MATRIZ INVERSA:
+	//IMPRESI脫N DE LA MATRIZ INVERSA:
 	
 	for(int i=0; i<=2; i++) {
 		for(int j=0; j<=2; j++) {
